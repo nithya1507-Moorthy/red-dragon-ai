@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F8F7F3;
+    --text-primary: #142B3B;
+    --action-primary: #E85D4A;
+    --bg-secondary: #DCEFE5;
+    --surface: #FFFFFF;
+    --text-muted: #65727D;
+    --border-color: #E5E5DF;
+    --dark-section: #142B3B;
+    --success: #247A55;
+    --warning: #A86417;
+    --danger: #B83232;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-manrope), var(--font-inter), sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom editorial fintech utility classes */
+.bg-warm {
+  background-color: #F8F7F3;
+}
+
+.text-navy {
+  color: #142B3B;
+}
+
+.bg-navy {
+  background-color: #142B3B;
+}
+
+.bg-sage, .bg-mint {
+  background-color: #DCEFE5;
+}
+
+.text-coral {
+  color: #E85D4A;
+}
+
+.bg-coral {
+  background-color: #E85D4A;
+}
+
+.border-subtle {
+  border-color: #E5E5DF;
+}
+
+.text-muted-custom {
+  color: #65727D;
+}
+
+/* Fintech card & interaction refinements */
+.fintech-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5DF;
+  box-shadow: 0 1px 3px 0 rgba(20, 43, 59, 0.04), 0 1px 2px -1px rgba(20, 43, 59, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fintech-card:hover {
+  border-color: #CCD1D5;
+  box-shadow: 0 8px 24px -4px rgba(20, 43, 59, 0.08), 0 2px 6px -2px rgba(20, 43, 59, 0.04);
+  transform: translateY(-1px);
+}
+
+/* Subtle print styles */
+@media print {
+  header, footer, .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+}
